@@ -1,0 +1,113 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  padding: 5%;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 85%;
+}
+
+.column {
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 2%;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: repeat(100px 100px 100px 100px 100px 100px 100px 100px 100px 100px);
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+}
+
+.grid-item-empty {
+  background: #a3deec;
+  display: flex;
+  justify-content: center;
+  color: #FFF;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.grid-item {
+  background: #51918e;
+  display: flex;
+  justify-content: center;
+  color: #FFF;
+  border: 1px solid black;
+  object-fit: contain;
+  cursor: pointer;
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.select-ship {
+  color: #fff;
+  animation: blinkingBackgroundShip 2s infinite;
+}
+@keyframes blinkingBackgroundShip{
+  0%		{ background-color: #f1f502;}
+  25%   { background-color: #8fc007;}
+  50%		{ background-color: #25ec0b;}
+  75%   { background-color: #a8ec0b;}
+  100%  { background-color: #f1f502;}
+}
+
+.posible-mov {
+  color: #fff;
+  animation: blinkingBackgroundShip 2s infinite;
+}
+@keyframes blinkingBackgroundMov{
+  0%		{ background-color: #02f50e;}
+  25%   { background-color: #0dc007;}
+  50%		{ background-color: #25ec0b;}
+  75%   { background-color: #0bec16;}
+  100%  { background-color: #4ff502;}
+}
+
+.posible-shot {
+  color: #fff;
+  animation: blinkingBackgroundShot 2s infinite;
+}
+@keyframes blinkingBackgroundShot{
+  0%		{ background-color: #f52602;}
+  25%   { background-color: #c03207;}
+  50%		{ background-color: #ec130b;}
+  75%   { background-color: #ec0b0b;}
+  100%  { background-color: #f55b02;}
+}
+
+.log-wrapper {
+  position: absolute;
+  right: 18%;
+  bottom: 12vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-bottom: 1vh;
+  background: #EBF4FB;
+  height: 35vh;
+  width: 18vw;
+  border:1px solid #ACD8F0;
+  border-radius: 10%;
+  overflow-y: auto;
+
+}
+
+.blocked {
+  background: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  color: #FFF;
+  border: 1px solid black;
+  cursor: pointer;
+}
